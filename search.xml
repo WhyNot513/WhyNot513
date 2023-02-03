@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>C#字符串转变成日期类型</title>
+      <link href="/2023/02/03/C-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E5%8F%98%E6%88%90%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B/"/>
+      <url>/2023/02/03/C-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E5%8F%98%E6%88%90%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B/</url>
+      
+        <content type="html"><![CDATA[<h3 id="方法一-Convert-ToDateTime-string"><a href="#方法一-Convert-ToDateTime-string" class="headerlink" title="方法一 Convert.ToDateTime(string)"></a>方法一 Convert.ToDateTime(string)</h3><p>string格式有要求，必须是yyyy-MM-dd hh:mm:ss 例如 2023-02-03 14:59:38</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ Convert.ToDateTime(string)</span><br></pre></td></tr></table></figure><h3 id="方法二-Convert-ToDateTime-string-IFormatProvider"><a href="#方法二-Convert-ToDateTime-string-IFormatProvider" class="headerlink" title="方法二 Convert.ToDateTime(string, IFormatProvider)"></a>方法二 Convert.ToDateTime(string, IFormatProvider)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">DateTime dt;</span><br><span class="line">DateTimeFormatInfo dtFormat = new System.GlobalizationDateTimeFormatInfo();</span><br><span class="line">dtFormat.ShortDatePattern = <span class="string">&quot;2023/02/03&quot;</span>;</span><br><span class="line">dt = Convert.ToDateTime(<span class="string">&quot;2023/02/03&quot;</span>, dtFormat);</span><br></pre></td></tr></table></figure><h3 id="方法三-DateTime-ParseExact"><a href="#方法三-DateTime-ParseExact" class="headerlink" title="方法三 DateTime.ParseExact()"></a>方法三 DateTime.ParseExact()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">string dateString = <span class="string">&quot;20230203&quot;</span>;</span><br><span class="line">DateTime dt = DateTime.ParseExact(dateString, <span class="string">&quot;20230203&quot;</span>, System.Globalization.CultureInfo.CurrentCulture);</span><br><span class="line">或者</span><br><span class="line">DateTime dt = DateTime.ParseExact(dateString, <span class="string">&quot;20230203&quot;</span>, System.Globalization.CultureInfo.InvariantCulture);</span><br></pre></td></tr></table></figure><p>[转载链接] <a href="https://www.cnblogs.com/junjie94wan/archive/2012/12/10/2811134.html">https://www.cnblogs.com/junjie94wan/archive/2012/12/10/2811134.html</a> </p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Pycharm</title>
       <link href="/2023/02/01/Pycharm/"/>
       <url>/2023/02/01/Pycharm/</url>
