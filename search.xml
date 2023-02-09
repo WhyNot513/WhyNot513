@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>位运算</title>
+      <link href="/2023/02/09/%E4%BD%8D%E8%BF%90%E7%AE%97/"/>
+      <url>/2023/02/09/%E4%BD%8D%E8%BF%90%E7%AE%97/</url>
+      
+        <content type="html"><![CDATA[<p>(?![a-zA-Z]{8,15}$)  表示剔除只包含字母且数目在8到15位数之间<br>（&#x2F;d {8,15}） 表示只包含数据的8到15之间</p><h3 id="Unity-使用位运算"><a href="#Unity-使用位运算" class="headerlink" title="Unity 使用位运算"></a>Unity 使用位运算</h3><p>首先引用 using System.Text.RegularExpressions 命名空间<br>然后指定规则<br>string rule &#x3D; @”^[a-zA-Z][a-zA-Z\d]{6,9}$” 表示 开头为字母然后包含字母和数字的6到9位数</p><p>Regex re &#x3D; new Regex(rule);<br>bool match &#x3D; re.IsMatch(需要检测的字符串);</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>C#字符串转变成日期类型</title>
       <link href="/2023/02/03/C-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E5%8F%98%E6%88%90%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B/"/>
       <url>/2023/02/03/C-%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E5%8F%98%E6%88%90%E6%97%A5%E6%9C%9F%E7%B1%BB%E5%9E%8B/</url>
